@@ -1,0 +1,147 @@
+:root {
+    --primario: #7D634F;
+    --secundario: #F9E7DF;
+    --white: #f5f5f5;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+main {
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card {
+    background-color: var(--white);
+    display: flex;
+    width: 400px;
+    height: 400px;
+    color: var(--primario);
+}
+
+.profile {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.profile-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-top h1, .stats .stat h2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-top h1 span, .stats .stat h2 span {
+    font-weight: 100;
+    font-size: 1.7rem;
+}
+
+.stats {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stats .stat {
+    height: 33%;
+    background-color: var(--secundario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-photo {
+    position: relative;
+    height: 100px;
+    width: 100px;
+}
+
+.profile-photo img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.circle {
+    position: absolute;
+    border: 2px solid var(--primario);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: transform ease-out 0.5s;
+}
+
+.circle.one {
+    border-right-color: transparent;
+    height: 115px;
+    width: 115px;
+}
+
+.circle.two {
+    border-left-color: transparent;
+    height: 125px;
+    width: 125px;
+}
+
+.profile-photo:hover .circle.one {
+    transform: translate(-50%, -50%) rotate(450deg);
+}
+
+.profile-photo:hover .circle.two {
+    transform: translate(-50%, -50%) rotate(-270deg);
+}
+
+.button {
+    background-color: transparent;
+    border: 2px solid var(--primario);
+    color: var(--primario);
+    border-radius: 30px;
+    font-size: 1.7rem;
+    padding: 10px 0;
+    cursor: pointer;
+    width: 60%;
+    transition: ease-in-out 0.2s;
+    font-weight: 700;
+}
+
+.button:hover {
+    color: var(--white);
+    background-color: var(--primario);
+    transform: scale(1.05);
+}
+
+.profile-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
